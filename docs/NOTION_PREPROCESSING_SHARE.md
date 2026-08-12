@@ -1,5 +1,9 @@
 # KLoSA·국민건강영양조사 전처리 결과 공유
 
+> **GitHub 검토 링크:** [Draft PR #2 — KLoSA·KNHANES 공식 전처리 파이프라인](https://github.com/J36-Ai-Editer/chronic-disease-lifestyle-challenge/pull/2)
+
+> 팀원은 PR의 `Files changed`에서 코드와 문서를 확인하고, 수정 의견은 PR 댓글로 남겨주세요. 원자료와 행 단위 전처리 결과는 GitHub에 포함하지 않았습니다.
+
 ## 1. 작업 요약
 
 KLoSA 1–10차와 국민건강영양조사(KNHANES) 2016–2024년 원자료를 공식 코드북 기준으로 전처리했습니다. 두 조사는 관측 구조와 예측 시점이 달라 행 단위로 합치지 않고, 공통 변수의 의미·단위·결측 규칙·역할을 통합 변수 명세로 연결했습니다.
