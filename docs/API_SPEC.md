@@ -197,6 +197,7 @@
 
 ```json
 {
+  "name": "홍길동",
   "email": "user@example.com",
   "password": "********",
   "terms_agreed": true
@@ -256,17 +257,19 @@
 {
   "checkup_type": "initial",
   "checkup_date": "2026-08-01",
+  "height_cm": 165.0,
   "weight_kg": 67.5,
   "waist_cm": 91.0,
-  "smoking_status": "never",
-  "drinking_frequency": "monthly_or_less",
-  "physical_activity_level": "insufficient",
-  "has_family_history_diabetes": true,
-  "feature_contract_version": "diabetes-incidence-input-v1"
+  "self_rated_health": "good",
+  "meal_count_yesterday": 3,
+  "regular_exercise": true,
+  "current_smoker": false,
+  "current_drinker": false,
+  "feature_schema_version": "diabetes-incidence-input-v1"
 }
 ```
 
-응답에는 생성된 `checkup_id`, 입력값의 단위와 검증 결과를 포함한다. 위 필드는 계약 예시이며 실제 필수·선택 입력은 양준혁 담당 모델 입력 계약으로 고정한다. 라벨을 직접 결정하거나 기준 시점 이후에 관측된 값은 입력에서 제외한다.
+응답에는 생성된 `checkup_id`, 입력값의 단위와 검증 결과를 포함한다. 위 필드는 현재 백엔드 입력 계약 예시이며, 라벨을 직접 결정하거나 기준 시점 이후에 관측된 값은 입력에서 제외한다.
 
 ### 4.4 비동기 예측 요청
 
@@ -301,7 +304,7 @@
   "data": {
     "job_id": "predjob_01J...",
     "status": "succeeded",
-    "prediction_ids": [901],
+    "prediction_id": 901,
     "finished_at": "2026-08-13T03:20:04Z"
   },
   "meta": {"request_id": "req_01J...", "timestamp": "2026-08-13T03:20:04Z"}
